@@ -12,7 +12,26 @@
 	<link href="css/default.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/garden_dev.js"></script>
-    <script type="text/javascript" src="js/functions_dev.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js">
+	var password = "demo"; // because ANYONE CAN SEE THIS IN VIEW SOURCE!
+
+
+// Repeatedly prompt for user password until success:
+(function promptPass() {
+
+  var psw = prompt("Enter your Password");
+
+  while (psw !== password) {
+    alert("Incorrect Password");
+    return promptPass();
+  }
+
+}());
+
+
+alert('WELCOME');
+	    
+	</script>
 </head>
 
 <body>
